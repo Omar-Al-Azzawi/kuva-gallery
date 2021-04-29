@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'head-imports.html' %}
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-fixed navbar-inner header"
+        style="padding: 0px 16px"
+      >
+        <div class="navbar-brand" style="color: rgb(0, 0, 0); display: table">
+          <a href="http://127.0.0.1:5000/">MY GALLERY</a>
+        </div>
+
+        <ul class="nav pull-right">
+          <li>
+            <a class="nav-link" href="/upload">Upload</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/filters">Filters</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="container" id="content">
+      {% include 'gallery.html' %}
+    </section>
+    {% include 'scripts.html' %}
+    <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
+  </body>
+</html>
